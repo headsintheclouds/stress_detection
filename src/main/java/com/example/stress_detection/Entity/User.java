@@ -1,21 +1,27 @@
-package com.example.stress_detection.entity;
+package com.example.stress_detection.Entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "users")
+import com.baomidou.mybatisplus.annotation.*;
+
+
+@TableName("users")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
+// TODO ： 需要使用MP注解重写
+
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @TableId(value = "user_id", type = IdType.AUTO)
     private Long userId;
 
     @Column(nullable = false, unique = true)
