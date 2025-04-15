@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    host: localhost
+    username: root
+    password: root
+    port: 3306
+    database: stress_detection
+    driver-class-name: com.mysql.cj.jdbc.Driver
