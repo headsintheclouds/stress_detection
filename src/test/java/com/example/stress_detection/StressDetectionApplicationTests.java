@@ -11,20 +11,19 @@ import java.util.List;
 @SpringBootTest
 class StressDetectionApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
-
-
 	@Autowired
 	private UserMapper userMapper;
 
 	@Test
-	void TestSelect() {
-		List<User> users = userMapper.selectList(null);
-		users.forEach(System.out::println);
-		System.out.println("我修改咯");
+	void contextLoads() {
 	}
 
+	@Test
+	void testSelect() {
+		List<User> users = userMapper.selectList(null);
+		users.forEach(System.out::println);
+		System.out.println("测试完成");
+	}
 }
+
 

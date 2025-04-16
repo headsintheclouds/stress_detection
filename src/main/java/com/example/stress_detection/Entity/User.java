@@ -30,8 +30,6 @@ public class User {
     @TableField(value = "phone")
     private String phone;
 
-    private LocalDateTime registrationTime;
-    private LocalDateTime lastLoginTime;
 
     // Getters and setters
 }
