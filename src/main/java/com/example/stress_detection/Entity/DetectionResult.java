@@ -1,40 +1,33 @@
-package com.example.stress_detection.entity;
+package com.example.stress_detection.Entity;
 
-
-import javax.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
+import com.baomidou.mybatisplus.annotation.*;
 
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "detection_results")
+@TableName("detection_results")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class DetectionResult {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @TableId(value = "result_id", type = IdType.AUTO)
     private Long resultId;
 
-    @ManyToOne
-    @JoinColumn(name = "file_id", nullable = false)
-    private File file; // Foreign key to the analyzed file
+    @TableField(value = "file_id")
+    private Long fileId;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
-    private User user; // Foreign key to the user who performed the analysis
+    @TableField(value = "user_id")
+    private Long userId;
 
-    @Column(nullable = false)
+    @TableField(value = "score")
     private Double score;
 
-    @Column
+    @TableField(value = "chart_path")
     private String chartPath;
 
-    @Column(nullable = false)
+    @TableField(value = "detect_time")
     private LocalDateTime detectTime;
-
-    // You might add other details about the analysis result
 }

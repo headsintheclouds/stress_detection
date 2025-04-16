@@ -1,32 +1,29 @@
 package com.example.stress_detection.Entity;
 
 import com.baomidou.mybatisplus.annotation.*;
-import javax.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
 
 import java.time.LocalDateTime;
 
-@Entity
-@TableName("files")
+
+@TableName("Files")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
-// TODO ： 需要使用MP注解重写
 public class File {
 
     @TableId(value = "file_id", type = IdType.AUTO)
     private Long fileId;
 
-    @TableField("")
+    @TableField("file_name")
     private String fileName;
 
-    @Column(nullable = false)
+    @TableField("file_path")
     private String filePath;
 
-    @Column(nullable = false)
+    @TableField("upload_time")
     private LocalDateTime uploadTime;
 
     @TableField("user_id")
