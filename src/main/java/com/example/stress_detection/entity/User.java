@@ -1,10 +1,8 @@
-package com.example.stress_detection.Entity;
+package com.example.stress_detection.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.time.LocalDateTime;
 
 import com.baomidou.mybatisplus.annotation.*;
 
@@ -27,6 +25,7 @@ public class User {
 
     @TableField(value = "name")
     private String name;
+
     @TableField(value = "phone")
     private String phone;
 

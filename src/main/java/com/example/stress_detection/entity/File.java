@@ -1,4 +1,4 @@
-package com.example.stress_detection.Entity;
+package com.example.stress_detection.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;

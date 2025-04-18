@@ -1,4 +1,4 @@
-package com.example.stress_detection.Entity;
+package com.example.stress_detection.entity;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

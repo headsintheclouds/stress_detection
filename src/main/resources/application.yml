@@ -15,3 +15,8 @@ spring:
 mybatis-plus:
     configuration:
         log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+    mvc:
+        pathmatch:
+            matching-strategy: ant_path_matcher
