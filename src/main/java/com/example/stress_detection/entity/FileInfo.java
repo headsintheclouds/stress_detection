@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class File {
+public class FileInfo {
 
     @TableId(value = "file_id", type = IdType.AUTO)
     private Long fileId;
@@ -27,7 +27,6 @@ public class File {
     private LocalDateTime uploadTime;
 
     @TableField("user_id")
-    private Long user_id; // Foreign key to the User who uploaded the file
+    private Long user_id;
 
-    // You might add other relevant fields like file size, content type, etc.
 }
